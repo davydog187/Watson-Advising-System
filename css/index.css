@@ -1,0 +1,56 @@
+body { background: #F0F0F0 ; font-family: serif; }
+li { margin-left: -40px; list-style: none; padding-bottom: 5px; }
+a { text-decoration: none; color: black; }
+textarea { resize: none; }
+span { display: inline; }
+
+.bold { font-weight: bold; }
+.oblique { font-style: oblique; }
+.center { text-align: center; }
+.queue_data { padding-left: 30%; }
+div.queue_data td { padding-right: 20px; }
+.nav { background-color: #00694E; color: white; border: solid 1px white; display: table-cell; width: 200px; height: 30px; text-align: center; padding-top: 5px;  } 
+a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E; }
+
+#wrapper { background: white; width: 1000px; margin: auto; border: solid 1px black; display: table; height: 1px; }
+#header { background: #00694E url('../img/binghamton-logo.gif') no-repeat 25px center; height: 100px; line-height: 100px; }
+#header img { padding: 15px; float: left; }
+#header h1 { color: white; font-weight: lighter; text-align: center; margin: 0px; padding-left: 18%; }
+#navbar ul { padding: 0px; margin: 0px; }
+#navbar li { margin: 0px; }
+#content { margin: 50px 5px; min-height: 400px; }
+#footer { float: left; width: 100%; background: #00694E; text-align: center; height: 30px; border-top: solid 1px black; }
+#footer p { color: white; margin: 6px; }
+
+#search { text-align: center; width: 700px; margin: auto; }
+#search h2 { margin: 5px; }
+#search_bnumber { float: left; width: 50%; }
+#search_name { float: left; width: 50%; }
+
+#search_results  { text-align: left; width: 300px; margin: auto; display: none}
+#search_results h2 { text-align: center; margin-bottom: 25px; }
+#search_results input { margin: 5px; }
+#search_results_button { text-align: center; padding-top: 15px; }
+
+#student_info { float: left; display: table; width: 50%; margin: 0px 5%; }
+#student_info td { padding-right: 20px; }
+#queue_form { display: table;  width: 1px; text-align: center; margin: 50px 0px; }
+#queue_form select { margin-bottom: 50px; }
+
+#queue { float: left; width: 40%; display: table; }
+#queue table { margin-bottom: 40px; } 
+#queue td { padding-bottom: 10px; padding-left: 10px; }
+#queue_name { padding-right: 40px; }
+
+#cur_queue { margin-left: 50px; } 
+#cur_queue p { margin-bottom: 5px; } 
+
+#login { width: 250px; margin: auto; text-align: center; }
+#login input, button { margin: 10px; }
+
+#finish_student td {padding-right: 20px; }
+#finish_student form {padding-left: 40%; }
+
+#edit_student form {  }
+#edit_student input { margin: 7px; }
+#edit_student p { padding-left: 30%; }
