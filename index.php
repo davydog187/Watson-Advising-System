@@ -3,18 +3,18 @@
 		<title>Watson Undergraduate Advising System</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/results.js" type="text/javascript"></script> 
+		<script src="js/results.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="wrapper"> 
+		<div id="wrapper">
    <?php require('header.html'); ?>
 			<div id="content">
 				<!-- Searching for students by using their B-Number or name -->
 				<div id="search">
 					<h2>Search for a Student</h2>
 					<!-- form action should be handled by results.js -->
-					<form id="search_form" > 
-						<div id="search_bnumber"> 
+					<form id="search_form" >
+						<div id="search_bnumber">
 							<h3 id="bnumber">By B-Number:</h3>
 							<p>B-Number: <input type="text" name="bnumber" /></p>
 						</div>
@@ -23,10 +23,10 @@
 							<p>First Name: <input type="text" name="fname" /></p>
 							<p>Last Name: <input type="text" name="lname" /></p>
 						</div>
-						<input type="submit" value="Search" /> 
-					</form>				
+						<input type="submit" value="Search" />
+					</form>
 				</div>
-			
+
 				<!-- Display the results of searching for a student -->
 				<div id="search_results" >
 					<h2>Students Found</h2>
@@ -37,10 +37,10 @@
 				</div>
 
 			</div>
-			
+
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>
 			</div>
 		</div>
-	</body>	
+	</body>
 </html>

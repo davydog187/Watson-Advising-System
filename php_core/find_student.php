@@ -10,18 +10,18 @@ if($fname=="" && $lname=="" && $bnumber==""){
   exit(1);
  }
 $query = "SELECT bnumber, firstname, lastname FROM students WHERE ";
-
 if($bnumber!=""){
-  $query .= "bnumber='".$bnumber."'";
+  $query .= sprintf("bnumber='%s'", mysql_real_escape_string($bnumber));
  }
 elseif($fname==""){
-  $query .= "lastname LIKE'".$lname."%'";
+  $query .= sprintf("lastname LIKE '%s%%'", mysql_real_escape_string($lname));
 }
 elseif($lname==""){
-  $query .= "firstname LIKE '".$fname."%'";
+  $query .= sprintf("firstname LIKE '%s%%'", mysql_real_escape_string($fname));
 }else{
-  $query .= "firstname LIKE '".$fname."%'AND lastname LIKE '".$lname."%'";
- }
+	$query .= sprintf("firstname LIKE '%s%%'AND lastname LIKE '%s%%'", mysql_real_escape_string($fname),
+		mysql_real_escape_string($lname));
+}
 
 $result = mysql_query($query);
 

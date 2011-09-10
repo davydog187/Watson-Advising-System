@@ -8,7 +8,7 @@ if(isset($_POST['select_student'])){
 
 require_once("./php_core/connect_watson.php");
 
-$query = "SELECT * FROM students WHERE bnumber='$bnumber'";
+$query = sprintf("SELECT * FROM students WHERE bnumber='%s'", mysql_real_escape_string($bnumber));
 
 $studentInfo = mysql_query($query); //Error check this
 
@@ -29,10 +29,10 @@ if($studentInfo){
 		<title>Watson Undergraduate Advising System</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/waiting.js" type="text/javascript"></script> 
+		<script src="js/waiting.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="wrapper"> 
+		<div id="wrapper">
   <?php require('header.html') ?>
 			<div id="content">
 
@@ -61,7 +61,7 @@ if($studentInfo){
 								<option>Change of Major</option>
 								<option>Transfer into/out of Watson</option>
 								<option>Add/Drop</option>
-								<option>Other..</option>  
+								<option>Other..</option>
 							</select>
 							Additional Comments <br />
 							<textarea cols="40" rows="10" name="comments"></textarea> <br />
@@ -80,12 +80,12 @@ if($studentInfo){
 					  </div>
 					</table>
 				</div>
-				
+
 			</div>
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>
 			</div>
 		</div>
     <div id="edit-div"></div>
-	</body>	
+	</body>
 </html>

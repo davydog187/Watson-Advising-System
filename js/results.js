@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 		//Hide the search form
 		$("#search").hide();
-		
+
 		//grab form element data
 		var bn = $(this).find('input[name="bnumber"]').val(),
 		    fn = $(this).find('input[name="fname"]').val(),
@@ -30,6 +30,6 @@ $(document).ready(function(){
 			//Show new data
 			$("#search_results").show();
 		    });
-		
+
 	    });
     });

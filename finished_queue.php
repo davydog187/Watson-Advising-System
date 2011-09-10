@@ -5,10 +5,10 @@
 		<script src="js/jquery.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="wrapper"> 
+		<div id="wrapper">
    <?php require('header.html') ?>
 			<div id="content">
-        
+
 
 
 			</div>
@@ -16,6 +16,6 @@
 				<p>Created by David Lucia and Nick Ciaravella</p>
 			</div>
 		</div>
-	</body>	
+	</body>
 </html>
 

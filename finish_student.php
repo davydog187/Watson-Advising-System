@@ -1,8 +1,9 @@
 <?php
     if(isset($_GET['rectime'])){
         $rectime = $_GET['rectime'];
-        require_once('./php_core/connect_watson.php');
-        $query = "SELECT * FROM waiting w, students s WHERE s.bnumber=w.bnumber and w.rectime='$rectime'";
+				require_once('./php_core/connect_watson.php');
+
+        $query = sprintf("SELECT * FROM waiting w, students s WHERE s.bnumber=w.bnumber and w.rectime='%s'", mysql_real_escape_string($rectime));
 
         $rows = mysql_query($query);
         $num_rows = mysql_num_rows($rows);
@@ -23,6 +24,7 @@
 		<title>Watson Undergraduate Advising System</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/finish.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -30,7 +32,7 @@
 			<div id="content">
 				<div id="finish_student">
 					<h2 class="center">Finish Student Walk-in</h2>
-					<form method="post" action="php_core/add_to_finished.php">
+					<form id="finish_form" method="POST" action="php_core/add_to_finished.php">
               <table>
                 <tr>
 							    <td>B-Number:</td><td><input type="text" name="bnumber" value='<?php echo $student['bnumber']; ?>' disabled='disabled'></td>
@@ -49,7 +51,7 @@
             </table>
             <br />
             Initial Comments: <br />
-            <textarea cols="40" rows="10" name="intial_comments"><?php echo $student['comments']; ?></textarea>
+            <textarea cols="40" rows="10" name="initial_comments"><?php echo $student['comments']; ?></textarea>
             <br />
             Final Comments: <br />
             <textarea cols="40" rows="10" name="final_comments"></textarea> <br />

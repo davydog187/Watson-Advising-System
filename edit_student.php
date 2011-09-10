@@ -3,13 +3,13 @@
 $edit = false;
 
 if(isset($_POST['bnumber'])){
-    $edit = true;    
+    $edit = true;
     $bnumber = $_POST['bnumber'];
 
     require_once('./php_core/connect_watson.php');
-    //FIXME: check for SQL injection
-    $query = "select * from students where bnumber='$bnumber'";
-   
+
+		$query = sprintf("select * from students where bnumber='%s'", mysql_real_escape_string($bnumber));
+
     $result = mysql_query($query);
     $num_rows = mysql_num_rows($result);
 
@@ -30,11 +30,11 @@ if(isset($_POST['bnumber'])){
 		<script src="js/jquery.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="wrapper"> 
+		<div id="wrapper">
 		  <?php require('header.html'); ?>
 			<div id="content">
 				<div id="edit_student">
-					<h2 class="center"><?php if($edit){ echo "Edit";} else{ echo "Add";} ?> Student</h2> 
+					<h2 class="center"><?php if($edit){ echo "Edit";} else{ echo "Add";} ?> Student</h2>
 					<form method="post" action="php_core/update_student.php">
 						<p>
               <table>
@@ -54,15 +54,15 @@ if(isset($_POST['bnumber'])){
                 </tr>
             </table>
 						<div class="center"><input type="submit" value="Submit" /></div>
-						
+
 					</form>
 
-				</div>		
+				</div>
 			</div>
-			
+
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>
 			</div>
 		</div>
-	</body>	
+	</body>
 </html>

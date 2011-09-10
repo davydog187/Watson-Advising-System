@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function printRow($text){
     echo "<tr>$text</tr>";
@@ -34,10 +34,10 @@ $num_waiting = mysql_num_rows($rows);
 		<title>Watson Undergraduate Advising System</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
-		<script src="js/queue.js" type="text/javascript"></script> 
+		<script src="js/queue.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="wrapper"> 
+		<div id="wrapper">
 		<?php require('header.html'); ?>
 			<div id="content">
 				<div id="cur_queue">
@@ -46,7 +46,7 @@ $num_waiting = mysql_num_rows($rows);
     echo "<h2 class='center'>Next Up</h2>";
     $row = mysql_fetch_assoc($rows);
     buildStudent($row);
-    
+
     if($num_waiting>1){
         echo "<h2 class='center'>Currently Waiting</h2>";
         while($num_waiting>1){
@@ -58,17 +58,17 @@ $num_waiting = mysql_num_rows($rows);
   }
   else{
     echo "<p class='center'>No students waiting</p>";
-    
+
   }
 ?>
 				</div>
-						
+
 			</div>
-			
+
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>
 			</div>
 		</div>
     <div id="edit-div"></div>
-	</body>	
+	</body>
 </html>
