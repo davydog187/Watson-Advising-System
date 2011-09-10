@@ -5,14 +5,13 @@ Description:
 	Walkin system for the Watson Advising Office.
 
 Known issues:
-	Not RESTful, and uses some AJAX/PHP practices that would probably be frowned upon, but I learned PHP/Jquery from this project so I'll chalk it up to that.
-	After Version 1.0 is released I will probably do a major rewrite utilizing Code Igniter, but for now I'm gonna leave the crappy code thats still getting the 
-	job done.
-
-
-
+	* Not RESTful, and uses some AJAX/PHP practices that would probably be frowned upon, but I learned PHP/Jquery
+		from this project so I'll chalk it up to that.
+	* After Version 1.0 is released I will probably do a major rewrite utilizing Code Igniter, but for now I'm gonna
+		leave the crappy code thats still getting the job done.
 
 Bugs:
+	* In development...
 
 
 HTML/CSS by Nick Ciaravella
