@@ -2,9 +2,16 @@
 
 require_once("connect_watson.php");
 
-$bnumber = $_POST['bnumber']; //clean these
-$reason = $_POST['reason'];
-$comments = $_POST['comments'];
+if(isset($_POST['bnumber']) && isset($_POST['initial_comments']) && isset($_POST['final_comments'])){
+	$reason = $_POST['reason'];
+	$bnumber = $_POST['bnumber']; //clean these
+	$comments = $_POST['comments'];
+}
+else {
+
+
+
+}
 
 $query = "INSERT INTO waiting (bnumber, reason, comments)";
 $query .= sprintf(" VALUES ('%s', '%s', '%s')", mysql_real_escape_string($bnumber),

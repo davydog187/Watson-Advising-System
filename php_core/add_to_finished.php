@@ -1,12 +1,16 @@
 <?php
-	require_once("php_core/connect_watson.php");
-	if(isset)$_POST['bnumber']) && isset($_POST['initial_comments']) && isset($_POST['final_comments']){
-
+	require_once("./connect_watson.php");
+	if(isset($_POST['bnumber']) && isset($_POST['initial_comments']) && isset($_POST['final_comments'])){
+		$bnumber = $_POST['bnumber'];
+		$initial = $_POST['initial_comments'];
+		$final = $_POST['final_comments'];
 	}
 
 	else{
-		echo "theres an error....";
+		header("Location: ../index.php");
 	}
+
+	echo "$bnumber and $initial and $final";
 
 
 
