@@ -9,7 +9,7 @@ span { display: inline; }
 .center { text-align: center; }
 .queue_data { padding-left: 30%; }
 div.queue_data td { padding-right: 20px; }
-.nav { background-color: #00694E; color: white; border: solid 1px white; display: table-cell; width: 200px; height: 30px; text-align: center; padding-top: 5px;  } 
+.nav { background-color: #00694E; color: white; border: solid 1px white; display: table-cell; width: 200px; height: 30px; text-align: center; padding-top: 5px;  }
 a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E; }
 
 #wrapper { background: white; width: 1000px; margin: auto; border: solid 1px black; display: table; height: 1px; }
@@ -38,12 +38,12 @@ a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E
 #queue_form select { margin-bottom: 50px; }
 
 #queue { float: left; width: 40%; display: table; }
-#queue table { margin-bottom: 40px; } 
+#queue table { margin-bottom: 40px; }
 #queue td { padding-bottom: 10px; padding-left: 10px; }
 #queue_name { padding-right: 40px; }
 
-#cur_queue { margin-left: 50px; } 
-#cur_queue p { margin-bottom: 5px; } 
+#cur_queue { margin-left: 50px; }
+#cur_queue p { margin-bottom: 5px; }
 
 #login { width: 250px; margin: auto; text-align: center; }
 #login input, button { margin: 10px; }
