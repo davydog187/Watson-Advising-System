@@ -36,7 +36,6 @@ if(isset($_POST['bnumber'])){
 				<div id="edit_student">
 					<h2 class="center"><?php if($edit){ echo "Edit";} else{ echo "Add";} ?> Student</h2>
 					<form method="post" action="php_core/update_student.php">
-						<p>
               <table>
                 <tr>
 							    <td>B-Number:</td><td><input type="text"  <?php if($edit) echo "value='".$row['bnumber']."' disabled='disabled'"; ?>maxlength="9" size="10"></td>

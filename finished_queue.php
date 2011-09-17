@@ -12,6 +12,7 @@
    <?php require('header.html') ?>
 			<div id="content">
 				<div id="query_student">
+					<h2 class="center">Search Walkins</h2>
 					<form id="query_form" method="POST" action="php_core/query_finished">
 						<table>
 							<tr>
@@ -39,6 +40,8 @@
 								</td>
 							</tr>
 						</table>
+						<br />
+						<div class="center"><input type="submit" value"Submit" /></div>
 					</form>
 				</div>
 			</div>
