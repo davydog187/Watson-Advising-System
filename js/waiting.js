@@ -2,12 +2,12 @@
 $(document).ready(function(){
 	//Grabs the page to be used in functions
 	var $page = $(this);
-	
+
 	//Load waiting queue when page is loaded
 	loadList();
 
   $('.edit').click(function(event){
-        event.preventDefault();        
+        event.preventDefault();
         var bnum = $(this).attr('id');
         var form_data = "<form id='edit-form' action='./edit_student.php' method='POST'>";
         form_data += "<input type='hidden' name='bnumber' value='" + bnum + "'></form>";
@@ -16,12 +16,12 @@ $(document).ready(function(){
     });
 
 
-	
+
 	//action for when a remove is clicked
 	$(".remove").live("click", function(event){
 		event.preventDefault();
 		var time = $(this).attr("href");
-		
+
 		//remove student from the database and reload the list
 		$.post("./php_core/remove_student.php", {rectime: time}, function(){
 			loadList();
@@ -39,8 +39,9 @@ $(document).ready(function(){
 		    reason_form = $page.find('#reason').val(),
 		    comments_form = $page.find('textarea[name="comments"]').val();
 
+
 		//send data to be added to waiting table
-		$.post("./php_core/add_to_waiting.php", {bnumber: bnum, reason: reason_form, comments: comments_form}, 
+		$.post("./php_core/add_to_waiting.php", {bnumber: bnum, reason: reason_form, comments: comments_form},
 		       function(){
 			   loadList();
 			   //Redirect after posting data
@@ -48,7 +49,7 @@ $(document).ready(function(){
 		       });
 	    });
 
-	//loads the list into the waiting div    
+	//loads the list into the waiting div
 	function loadList(){
 	    $.post("./php_core/get_waiting.php", function(data){
 		    var waiting_list = $.parseJSON(data);
@@ -61,11 +62,11 @@ $(document).ready(function(){
 				var person = "<tr>";
 				person += "<td>" + (index+1) + ". </td";
 				person += "<td id=\'queue_name\'>" + element.firstname + " " + element.lastname + "</td>";
-				person += "<td><a class=\'remove' href=\'" + element.rectime + "\'>Remove</a></td>"; 
+				person += "<td><a class=\'remove' href=\'" + element.rectime + "\'>Remove</a></td>";
 				person += "</tr>";
 				$("#waiting").append(person);
 			    });
 		    }
 		});
-	};	
-    });	
+	};
+    });

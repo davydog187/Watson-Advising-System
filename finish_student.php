@@ -45,6 +45,9 @@
                 <tr>
 							    <td>Program:</td><td><input type="text" name="major" value='<?php echo $student['major']; ?>' disabled='disabled'></td>
                 </tr>
+                 <tr>
+                  <td>Visit Time:</td><td><input name="rectime" type="text" value='<?php echo $student['rectime']; ?>' disabled='disabled'></td>
+                </tr>
                 <tr>
                   <td>Reason for Visit:</td><td><input name="reason" type="text" value='<?php echo $student['reason']; ?>' disabled='disabled'></td>
                 </tr>
