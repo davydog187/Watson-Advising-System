@@ -13,23 +13,26 @@
 			<div id="content">
 				<div id="query_student">
 					<h2 class="center">Search Walkins</h2>
-					<form id="query_form" method="POST" action="php_core/query_finished">
+					<form id="query_form">
 						<table>
 							<tr>
-								<td>Date: </td><td><input type="text" id="datepicker"></td>
+								<td>Date: </td><td><input type="text" id ="datepicker" name="datepicker"></td>
 							</tr>
 							<tr>
-								<td>Bnumber:</td><td><input type="text" id="Bnumber"></td>
+								<td>Bnumber:</td><td><input type="text" name="bnumber"></td>
 							</tr>
 						<tr>
-								<td>First Name:</td><td><input type="text" id="firstname"></td>
+								<td>First Name:</td><td><input type="text" name="firstname"></td>
 							</tr>
 							<tr>
-								<td>Last Name:</td><td><input type="text" id="firstname"></td>
+								<td>Last Name:</td><td><input type="text" name="lastname"></td>
 							</tr>
 							<tr>
+								<td>Program:</td><td><input type="text" name="program"></td>
+							</tr>
+						<tr>
 								<td>Reason:</td><td>
-									<select id="reason">
+									<select name="reason">
 											<option></option>
 											<option>Scheduling</option>
 											<option>Change of Major</option>

@@ -11,7 +11,8 @@
             $student =  mysql_fetch_assoc($rows);
         }
         else{
-            //Then theres an error
+					//Then theres an error
+					header("Location: ./main_queue.php");
         }
     }
     else{

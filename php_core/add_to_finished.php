@@ -9,6 +9,7 @@ if(isset($_POST['bnumber']) && isset($_POST['initial_comments']) && isset($_POST
 	$rectime = trim($_POST['rectime']);
 
 
+
 	//Remove from waiting
 	$remove_query = sprintf("DELETE FROM waiting WHERE rectime='%s'", mysql_real_escape_string($rectime));
 	mysql_query($remove_query) or die("Error deleting $rectime");
@@ -22,10 +23,10 @@ if(isset($_POST['bnumber']) && isset($_POST['initial_comments']) && isset($_POST
 		mysql_real_escape_string($final),
 		mysql_real_escape_string($rectime));
 
-	mysql_query($query) or die("Error Inserting");
+	mysql_query($query) or die("<br />Error Inserting");
 	mysql_close($db);
 
-//	header("Location: ../main_queue.php");
+	header("Location: ../main_queue.php");
 
 }
 
@@ -33,7 +34,6 @@ else{
 	header("Location: ../index.php");
 }
 
-echo "$bnumber and $initial and $final and $reason and $rectime";
 
 
 
