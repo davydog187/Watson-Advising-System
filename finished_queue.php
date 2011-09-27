@@ -47,6 +47,7 @@
 						<div class="center"><input type="submit" value"Submit" /></div>
 					</form>
 				</div>
+				<div id="walkin_results"></div>
 			</div>
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>

@@ -16,8 +16,8 @@ $(document).ready(function(){
 //		alert(date + bn + fn + ln + pg + rs);
 		$.post("./php_core/find_finished.php", {date: dt, bnumber: bn, fname: fn, lname: ln, program: pg,
 				reason: rs}, function(data) {
-
-
+					$('#walkin_results').append(data);
+					$('#walkin_results').show();
 
 				});
 	});
