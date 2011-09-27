@@ -38,11 +38,11 @@ if(isset($_POST['date']) && isset($_POST['bnumber']) && isset($_POST['fname'])
 		}
 		$result = mysql_query($query);
 
-		$students_found = array("error" => false, "count" => 0);
+		$students_found = array("error" => false, "count" => 0, "students" =>array());
 
 		if($result && mysql_num_rows($result)>0){
 			while($row = mysql_fetch_assoc($result)){
-					$students_found[] = $row;
+					$students_found["students"][] = $row;
 					$students_found["count"]++;
 				}
 		}
