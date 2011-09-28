@@ -21,9 +21,9 @@ $(document).ready(function(){
             $("#walkin_results").append(students_found.error);
         }
         else{
-           $.each(students_found.students, function(i, a){
+           $.each(students_found.students, function(i, student){
                 $('#walkin_results').append(a.rectime + " " + a.firstname + " " + a.lastname + " " + a.bnumber); 
-
+                buildStudent(student);
              });
         }
         $('#walkin_results').show();
@@ -32,3 +32,23 @@ $(document).ready(function(){
 	});
 
 });
+
+function buildStudent(){
+   alert("cool!");
+function buildStudent(student){
+    $('#walkin_results').append("<div class='student_block'>");
+    $('#walkin_results').append("<label id='" + student.rectime + "' class='queue_data label' class='center'>".$row['bnumber']." ".$row['firstname']." ".$row['lastname']."</label> <input class='finish' type='submit' value='Finish'> <input class='delete' type='submit' value='Delete'>";
+    echo "<div class='queue_data' id='".$row['bnumber']."' style='display:none'>";
+    echo "<table>";
+    printRow("<td class='bold'>Email:</td>"."<td>".$row['email']."</td>");
+		printRow("<td class='bold'>Program:</td>"."<td>".$row['major']."</td>");
+		printRow("<td class='bold'>Calendar Year:</td>"."<td>".$row['year']."</td>");
+		printRow("<td class='bold'>Reason:</td>"."<td>".$row['reason']."</td>");
+		printRow("<td class='bold'>Comments:</td>"."<td>".$row['comments']."</td>");
+		echo "</table>";
+		echo "<a class='oblique edit' id='".$row['bnumber']."'href=''>Edit ".$row['firstname']."'s info.</a>";
+		echo "</div>";
+    echo "</div>";
+}
+
+}

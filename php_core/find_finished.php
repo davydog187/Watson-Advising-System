@@ -55,7 +55,8 @@ if(isset($_POST['date']) && isset($_POST['bnumber']) && isset($_POST['fname'])
 
 }
 else{
-	echo "nah bro";
+  $students_found = array("error" => "Missing information!");
+	echo json_encode($students_found);
 
 }
 

@@ -35,10 +35,18 @@
 									<select name="reason">
 											<option></option>
 											<option>Scheduling</option>
+                      <option>Overloads</option>
 											<option>Change of Major</option>
 											<option>Transfer into/out of Watson</option>
 											<option>Add/Drop</option>
-											<option>Other..</option>
+                      <option>University Withdrawal</option>
+                      <option>Pass/Fail options</option>
+                      <option>Major Requirements</option>
+                      <option>Dars Issues</option>
+                      <option>Study Abroad</option>
+                      <option>Letter of Recommendation</option>
+                      <option>Personal</option>
+                      <option>Other..</option>
 										</select>
 								</td>
 							</tr>

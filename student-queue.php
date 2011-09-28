@@ -56,14 +56,22 @@ if($studentInfo){
 					<div id="queue_form">
 						<form id="new_waiter">
 							Reason for Visit:
-							<select id="reason">
-								<option>Scheduling</option>
-								<option>Change of Major</option>
-								<option>Transfer into/out of Watson</option>
-								<option>Add/Drop</option>
-								<option>Other..</option>
-							</select>
-							Additional Comments <br />
+              <select id="reason">
+                <option>Scheduling</option>
+                <option>Overloads</option>
+                <option>Change of Major</option>
+                <option>Transfer into/out of Watson</option>
+                <option>Add/Drop</option>
+                <option>University Withdrawal</option>
+                <option>Pass/Fail options</option>
+                <option>Major Requirements</option>
+                <option>Dars Issues</option>
+                <option>Study Abroad</option>
+                <option>Letter of Recommendation</option>
+                <option>Personal</option>
+                <option>Other..</option>
+              </select>
+              Additional Comments <br />
 							<textarea cols="40" rows="10" name="comments"></textarea> <br />
 							<input type="submit" id="submit" value="Add to queue" />
 						</form>
