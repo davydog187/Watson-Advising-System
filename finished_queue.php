@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<title>Watson Undergraduate Advising System</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
 		<script src="js/finished_queue.js" type="text/javascript"></script>
@@ -55,7 +55,24 @@
 						<div class="center"><input type="submit" value"Submit" /></div>
 					</form>
 				</div>
-				<div id="walkin_results"></div>
+				<div id="walkin_results">
+					<h1 class="center">Search Results</h1>
+					<table id="results_table">
+						<thead>
+						<tr>
+							<th></th>
+							<th>Date</th>
+							<th>Time</th>
+							<th>B-Number</th>
+							<th>Name</th>
+							<th>Major</th>
+							<th>Reason</th>
+						</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<div id="footer">
 				<p>Created by David Lucia and Nick Ciaravella</p>
