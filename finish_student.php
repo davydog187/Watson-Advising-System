@@ -1,6 +1,6 @@
 <?php
     if(isset($_GET['rectime'])){
-        $rectime = $_GET['rectime'];
+      $rectime = $_GET['rectime'];
 				require_once('./php_core/connect_watson.php');
 
         $query = sprintf("SELECT * FROM waiting w, students s WHERE s.bnumber=w.bnumber and w.rectime='%s'", mysql_real_escape_string($rectime));

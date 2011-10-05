@@ -17,6 +17,15 @@ $(document).ready(function(){
 
 	$('#walkin_results').hide();
 
+  $("#result_form").submit(function(event){
+    event.preventDefault();
+    var s_date = $(".selected").find("#date").html();
+    var s_time = $(".selected").find("#time").html();
+    var view_page = "./view_result.php?rectime=" + s_date + "+" + s_time;
+    window.location = view_page;
+
+    });
+
 	$("#query_form").submit(function(event){
 		event.preventDefault();
 
@@ -49,8 +58,8 @@ $(document).ready(function(){
 
 function buildStudent(student, i){
 		var datetime = student.rectime.split(" ");
-		var row = "<tr><td>" + (i+1) + ".)</td><td>" + datetime[0] + "</td>"
-			+ "<td>" + datetime[1] + "</td>"
+		var row = "<tr><td>" + (i+1) + ".)</td><td id='date'>" + datetime[0] + "</td>"
+			+ "<td id='time'>" + datetime[1] + "</td>"
 			+ "<td>" + student.bnumber + "</td>"
 			+ "<td>" + student.firstname + " " + student.lastname + "</td>"
 			+ "<td>" + student.major + "</td>"

@@ -49,7 +49,10 @@ a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E
 #login input, button { margin: 10px; }
 
 #finish_student td {padding-right: 20px; }
-#finish_student form {padding-left: 40%; }
+#finish_student form {padding-left: 35%; }
+
+#view_result td {padding-right: 20px; }
+#view_result form {padding-left: 35%; }
 
 #query_student td {padding-right: 20px; }
 #query_student table {padding-left: 35%; }

@@ -35,21 +35,24 @@ if(isset($_POST['bnumber'])){
 			<div id="content">
 				<div id="edit_student">
 					<h2 class="center"><?php if($edit){ echo "Edit";} else{ echo "Add";} ?> Student</h2>
-					<form method="post" action="php_core/update_student.php">
+					<form method="get" action="php_core/update_student.php">
               <table>
                 <tr>
-							    <td>B-Number:</td><td><input type="text"  <?php if($edit) echo "value='".$row['bnumber']."' disabled='disabled'"; ?>maxlength="9" size="10"></td>
+							    <td>B-Number:</td><td><input type="text" name="bnumber" <?php if($edit) echo "value='".$row['bnumber']."' disabled='disabled'"; ?>maxlength="9" size="10"></td>
                 </tr>
                 <tr>
-                  <td>First Name:</td><td><input type="text" <?php if($edit) echo "value='".$row['firstname']."'"; ?> size="30px"></td>
+                  <td>First Name:</td><td><input type="text" name="firstname" <?php if($edit) echo "value='".$row['firstname']."'"; ?> size="30px"></td>
                 <tr>
-							    <td>Last Name:</td><td><input type="text" <?php if($edit) echo "value='".$row['lastname']."'"; ?> size="30px"></td>
+							    <td>Last Name:</td><td><input type="text" name="lastname" <?php if($edit) echo "value='".$row['lastname']."'"; ?> size="30px"></td>
                 </tr>
-							  <tr>
-                  <td>E-Mail:</td><td><input type="email" <?php if($edit) echo "value='".$row['email']."'"; ?> size="30px"></td>
+								<tr>
+                  <td>Year:</td><td><input type="text" name="year"  <?php if($edit) echo "value='".$row['year']."'"; ?> size="30px"></td>
+                </tr>
+						    <tr>
+                  <td>E-Mail:</td><td><input type="text" name="email"  <?php if($edit) echo "value='".$row['email']."'"; ?> size="30px"></td>
                 </tr>
                 <tr>
-							    <td>Program:</td><td><input type="text" <?php if($edit) echo "value='".$row['major']."'"; ?> size="30px"></td>
+							    <td>Program:</td><td><input type="text" name="major" <?php if($edit) echo "value='".$row['major']."'"; ?> size="30px"></td>
                 </tr>
             </table>
 						<div class="center"><input type="submit" value="Submit" /></div>
