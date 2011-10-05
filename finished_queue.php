@@ -56,7 +56,7 @@
 					</form>
 				</div>
 				<div id="walkin_results">
-          <h1 class="center">Search Results</h1>
+          <h1 id="title" class="center">Search Results</h1>
           <form id="result_form">
 					<table id="results_table">
 						<thead>
@@ -74,7 +74,8 @@
 						</tbody>
           </table>
         <div class="center"><input type="submit" value"Submit" /></div>
-        </form>
+				</form>
+				<div class="center"><input type="submit"  id="back" value="Back" /></div>
 				</div>
 			</div>
 			<div id="footer">

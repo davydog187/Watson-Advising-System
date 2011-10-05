@@ -7,6 +7,13 @@ $(document).ready(function(){
           });
       });
 
+		$("label").hover(function(){
+				$(this).addClass("hover-text");
+		},
+		function(){
+				$(this).removeClass("hover-text");
+		});
+
     $('.finish').click(function(event){
         event.preventDefault();
         var time = $(this).prev().attr("id");

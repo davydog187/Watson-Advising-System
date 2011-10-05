@@ -28,6 +28,7 @@ if(isset($_POST['bnumber'])){
 		<title>Watson Undergraduate Advising System</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/edit_student.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -35,7 +36,7 @@ if(isset($_POST['bnumber'])){
 			<div id="content">
 				<div id="edit_student">
 					<h2 class="center"><?php if($edit){ echo "Edit";} else{ echo "Add";} ?> Student</h2>
-					<form method="get" action="php_core/update_student.php">
+					<form id="update_form" method="get" action="php_core/update_student.php">
               <table>
                 <tr>
 							    <td>B-Number:</td><td><input type="text" name="bnumber" <?php if($edit) echo "value='".$row['bnumber']."' disabled='disabled'"; ?>maxlength="9" size="10"></td>

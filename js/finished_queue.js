@@ -17,6 +17,10 @@ $(document).ready(function(){
 
 	$('#walkin_results').hide();
 
+	$("#back").click(function(){
+		window.location = "./finished_queue.php";
+	});
+
   $("#result_form").submit(function(event){
     event.preventDefault();
     var s_date = $(".selected").find("#date").html();
@@ -42,15 +46,16 @@ $(document).ready(function(){
 				reason: rs}, function(data) {
         var students_found = $.parseJSON(data);
         if(students_found.error != false){
-            $("#walkin_results").append(students_found.error);
+            $("#walkin_results > h1").html(students_found.error);
+						$("#result_form").hide();
         }
         else{
            $.each(students_found.students, function(i, student){
                 buildStudent(student, i);
              });
+					 $("#back").hide();
         }
         $('#walkin_results').show();
-
 				});
 	});
 

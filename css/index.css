@@ -42,7 +42,7 @@ a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E
 #queue td { padding-bottom: 10px; padding-left: 10px; }
 #queue_name { padding-right: 40px; }
 
-#cur_queue { margin-left: 50px; }
+#cur_queue { padding-left: 50px; }
 #cur_queue p { margin-bottom: 5px; }
 
 #login { width: 250px; margin: auto; text-align: center; }
@@ -62,6 +62,9 @@ a.nav:hover { background-color: white; color: #00694E; border: solid 1px #00694E
 
 .selected { background-color: #FF9900; }
 .hover {background-color: #FFAD33; }
+.hover-text {font-weight: bold;}
+
+#student_block label {padding-left: 0; }
 
 #edit_student form {  }
 #edit_student input { margin: 7px; }
