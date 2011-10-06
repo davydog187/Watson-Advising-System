@@ -11,8 +11,8 @@ if(isset($_GET['rectime'])){
     $student =  mysql_fetch_assoc($rows);
   }
   else{
-    //There was an error
-    echo "ERROR!";
+		//There was an error
+		header("Location: finished_queue.php");
   }
 }
 else{
