@@ -73,7 +73,7 @@
 						<tbody>
 						</tbody>
           </table>
-        <div class="center"><input type="submit" value"Submit" /></div>
+        <div class="center"><input type="submit" value="View" /></div>
 				</form>
 				<div class="center"><input type="submit"  id="back" value="Back" /></div>
 				</div>
