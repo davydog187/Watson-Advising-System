@@ -1,3 +1,26 @@
+<?php
+/*
+require_once('./php_core/user_auth_fns.php');
+session_start();
+
+$username = $_POST['username'];
+$passwd = $_POST['passwd'];
+
+if($username && $passwd){
+	try {
+		login($username, $passwd);
+		$_SESSION['valid_user'] = $username;
+	}
+	catch( Exception $e) {
+		echo "You could not be logged in.";
+		exit;
+	}
+}
+
+check_valid_user();
+ */
+?>
+
 <html>
 	<head>
 		<title>Watson Undergraduate Advising System</title>
