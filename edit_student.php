@@ -21,8 +21,8 @@ if(isset($_POST['bnumber'])){
     }
     mysql_close($db);
 }
-?>
 
+?>
 <html>
 	<head>
 		<title>Watson Undergraduate Advising System</title>
@@ -42,9 +42,9 @@ if(isset($_POST['bnumber'])){
 							    <td>B-Number:</td><td><input type="text" name="bnumber" <?php if($edit) echo "value='".$row['bnumber']."' disabled='disabled'"; ?>maxlength="9" size="10"></td>
                 </tr>
                 <tr>
-                  <td>First Name:</td><td><input type="text" name="firstname" <?php if($edit) echo "value='".$row['firstname']."'"; ?> size="30px"></td>
+                  <td>First Name:</td><td><input type="text" name="firstname" <?php if($edit) echo "value=\"".$row['firstname']."\""; ?> size="30px"></td>
                 <tr>
-							    <td>Last Name:</td><td><input type="text" name="lastname" <?php if($edit) echo "value='".$row['lastname']."'"; ?> size="30px"></td>
+							    <td>Last Name:</td><td><input type="text" name="lastname" <?php if($edit) echo "value=\"".$row['lastname']."\""; ?> size="30px"></td>
                 </tr>
 								<tr>
                   <td>Year:</td><td><input type="text" name="year"  <?php if($edit) echo "value='".$row['year']."'"; ?> size="30px"></td>
